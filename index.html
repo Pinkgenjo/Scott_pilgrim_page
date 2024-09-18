@@ -1,12 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="dist/css/main.css">
+    <title>Scott Pilgrim contra o Mundo</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#characters">Personagens</a></li>
+                <li><a href="#trailer">Trailer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Scott Pilgrim contra o Mundo</h1>
+            <p>Uma história de amor épica para a geração do videogame</p>
+        </section>
+
+        <section id="about">
+            <h2>Sobre o Filme</h2>
+            <p>Scott Pilgrim contra o Mundo é uma comédia de ação baseada na série de quadrinhos de Bryan Lee O'Malley. O filme segue Scott Pilgrim, um baixista que deve derrotar os sete ex-namorados malvados de sua nova namorada para poder namorá-la.</p>
+            <div class="movie-info">
+                <div>
+                    <h3>Diretor</h3>
+                    <p>Edgar Wright</p>
+                </div>
+                <div>
+                    <h3>Ano</h3>
+                    <p>2010</p>
+                </div>
+                <div>
+                    <h3>Duração</h3>
+                    <p>1h 52min</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="characters">
+            <h2>Personagens</h2>
+            <div class="character-grid">
+                <div class="character" data-character="scott">
+                    <img src="./dist/images/scott2.webp" alt="Scott Pilgrim">
+                    <h3>Scott Pilgrim</h3>
+                </div>
+                <div class="character" data-character="ramona">
+                    <img src="./dist/images/ramona2.png" alt="Ramona Flowers">
+                    <h3>Ramona Flowers</h3>
+                </div>
+                <div class="character" data-character="knives">
+                    <img src="./dist/images/knives.webp" alt="Knives Chau">
+                    <h3>Knives Chau</h3>
+                </div>
+                <div class="character" data-character="wallace">
+                    <img src="./dist/images/wallace2.webp" alt="Wallace Wells">
+                    <h3>Wallace Wells</h3>
+                </div>
+                <div class="character" data-character="stephen">
+                    <img src="./dist/images/stephen2.webp" alt="Stephen Stills">
+                    <h3>Stephen Stills</h3>
+                </div>
+                <div class="character" data-character="kim">
+                    <img src="./dist/images/kim2.png" alt="Kim Pine">
+                    <h3>Kim Pine</h3>
+                </div>
+                <div class="character" data-character="neil">
+                    <img src="./dist/images/neil2.webp" alt="Neil Nordegraf">
+                    <h3>Neil Nordegraf</h3>
+                </div>
+                <div class="character" data-character="envy">
+                    <img src="./dist/images/envy.png" alt="Envy Adams">
+                    <h3>Envy Adams</h3>
+                </div>
+                <div class="character" data-character="matthew">
+                    <img src="./dist/images/matthew.webp" alt="Matthew Patel">
+                    <h3>Matthew Patel</h3>
+                </div>
+                <div class="character" data-character="lucas">
+                    <img src="./dist/images/lucas.webp" alt="lucas Lee">
+                    <h3>Lucas Lee</h3>
+                </div>
+                <div class="character" data-character="todd">
+                    <img src="./dist/images/todd.webp" alt="Todd Ingram">
+                    <h3>Todd Ingram</h3>
+                </div>
+                <div class="character" data-character="roxie">
+                    <img src="./dist/images/roxie.webp" alt="Roxy Richter">
+                    <h3>Roxy Richter</h3>
+                </div>
+                <div class="character" data-character="twins">
+                    <img src="./dist/images/twins.webp" alt="twins katayanagi">
+                    <h3>Gêmeos katayanagi</h3>
+                </div>
+                <div class="character" data-character="gideon">
+                    <img src="./dist/images/gideon.webp" alt="Gideon Graves">
+                    <h3>Gideon Graves</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="trailer">
+            <h2>Trailer</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7wd5KEaOtm4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Scott Pilgrim contra o Mundo. Todos os direitos reservados.</p>
+        <p>Criado por Emerson Ferreira</p>
+    </footer>
+
+    <div id="character-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="Character Image">
+            <div id="modal-description"></div>
+        </div>
+    </div>
+    <script src="./dist/js/main.js" defer></script>
 </body>
 </html>

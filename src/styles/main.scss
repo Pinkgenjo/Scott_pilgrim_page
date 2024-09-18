@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap');
+
+$primary-color: #ff3366;
+$secondary-color: #33ccff;
+$background-color: #1a1a1a;
+$text-color: #ffffff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(26, 26, 26, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    nav {
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 1rem;
+
+            li {
+                margin: 0 1rem;
+
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                    font-family: 'Press Start 2P', cursive;
+                    font-size: 0.8rem;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('../images/capa2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(26, 26, 26, 0.7);
+    }
+
+    h1, p {
+        position: relative;
+        z-index: 1;
+    }
+
+    h1 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: $primary-color;
+        text-shadow: 3px 3px $secondary-color;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+section {
+    padding: 4rem 2rem;
+
+    h2 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: $secondary-color;
+    }
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+
+    div {
+        text-align: center;
+
+        h3 {
+            color: $primary-color;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.character {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        border: 3px solid $primary-color;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1rem;
+        color: $secondary-color;
+    }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+footer {
+    background-color: darken($background-color, 5%);
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .modal-content {
+        background-color: $background-color;
+        position: relative;
+        margin: 10% auto;
+        padding: 20px;
+        width: 80%;
+        max-width: 600px;
+        border-radius: 10px;
+        border: 3px solid $primary-color;
+    }
+
+    .close {
+        color: $secondary-color;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    #modal-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    #modal-description {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .movie-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .character-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .character {
+        img {
+            width: 150px;
+            height: 225px;
+        }
+
+        h3 {
+            font-size: 0.8rem;
+        }
+    }
+}
